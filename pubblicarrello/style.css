@@ -1,0 +1,84 @@
+/*tab*/
+.step {
+      display: none;
+    }
+
+    .step.active {
+      display: block;
+    }
+    .nav-pills .nav-link.active{
+      background-color: orange !important;
+    }
+    .nav-pills .nav-link{
+      background-color: lightgray;
+      color: white;
+    }
+    .nav-pills .nav-link:hover{
+      background-color: lightsalmon;
+      color: white;
+    }
+
+.ts-blank{
+  height: 45px;
+  background: #424242;
+  margin-bottom: 20px;
+} 
+.step2-input{
+  width: 3.2rem;
+}
+.step2-size{
+  background: black;
+  color: white;
+  border-radius: 0.2rem;
+}
+.step2-color{
+  background: lightgreen;
+}
+.ts-butn{
+  width: 100%;
+  border: none;
+  color: white;
+  font-weight: 700;
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+}
+.ts-back-butn{
+  background: lightgreen;
+}
+.ts-next-butn{
+  background: orange;
+}
+.step2-link-style{
+  text-decoration: none;
+  color: black;
+}
+
+/*step no five css*/
+.cus-tooltip:after{
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 50px;
+    background: transparent url("images/tooltip.png") 0 50% no-repeat;
+}
+
+.steps{
+    background: #f2fbff;
+}
+.steps img{
+    width: 100%;
+}
+.steps h5{
+    background: #baedff;
+    font-weight: bold;
+    padding: 6px;
+}
+.cus-font11{
+    font-size: 11px;
+    color: #444444;
+}
+.cus-font14{
+    font-size: 11px;
+    color: #444444;
+}
+

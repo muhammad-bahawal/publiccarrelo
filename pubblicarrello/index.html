@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Navigation with Next and Back Buttons</title>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="ts-blank"></div>
+    <div class="row">
+      <div class="col-12 border-bottom pb-3">
+        <p class="mb-0">CALCOLA PREVENTIVO</p>
+        <small>ART. FR610820W - T-shirt Original White</small>
+      </div>
+    </div>
+    <!-- steps -->
+    <nav class="nav nav-pills flex-column flex-sm-row mt-3">
+      <a id="step1Tab" class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#" onclick="changeStep(1)">
+        <span class="fw-bold">Step 1</span><br>
+        <small>Quantita</small>
+      </a>
+      <a id="step2Tab" class="flex-sm-fill text-sm-center nav-link" href="#" onclick="changeStep(2)">
+        <span class="fw-bold">Step 2</span><br>
+        <small>Taglie e colori</small>
+      </a>
+      <a id="step3Tab" class="flex-sm-fill text-sm-center nav-link" href="#" onclick="changeStep(3)">
+        <span class="fw-bold">Step 3</span><br>
+        <small>Opzioni di stampa</small>
+      </a>
+      <a id="step4Tab" class="flex-sm-fill text-sm-center nav-link" href="#" onclick="changeStep(4)">
+        <span class="fw-bold">Step 4</span><br>
+        <small>Optional</small>
+      </a>
+      <a id="step5Tab" class="flex-sm-fill text-sm-center nav-link" href="#" onclick="changeStep(5)">
+        <span class="fw-bold">Step 5</span><br>
+        <small>Upload file</small>
+      </a>
+      <a id="step6Tab" class="flex-sm-fill text-sm-center nav-link" href="#" onclick="changeStep(6)">
+        <span class="fw-bold">Step 6</span><br>
+        <small>Carrello</small>
+      </a>
+    </nav>
+  <!-- step number one -->
+    <div id="step1" class="step active">
+      <div class="row mt-5">
+        <div class="col-12 border-bottom pb-3">
+          <p>Inserisci il numero di t-shirt che desideri e clicca AVANTI per procedere con il tuo preventivo o acquisto.</p>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <label>QUANTITÀ</label>
+          <input type="text" class="ms-3" name="">
+        </div>
+      </div>
+      <div class="row justify-content-end mt-4">
+        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-3 col-6">
+          <button class="ts-next-butn ts-butn" onclick="changeStep(2)">Next</button>
+        </div>
+      </div>
+    </div>
+    <!-- step number two -->
+    <div id="step2" class="step">
+      <div class="row mt-3">
+        <div class="col-xl-8 col-lg-8 col-md-8 col-12 mt-3">
+          <div class="row">
+            <div class="col-12 border-bottom pb-1">
+              <p class="mb-0">QUANTITÀ DA SPECIFICARE 0/60</p>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-12 border-bottom pb-1">
+              <small>Inserisci la quantità desiderata in corrispondenza dei colori e delle taglie che preferisci. Clicca AVANTI per passare allo step successivo. info</small>
+            </div>  
+          </div>
+          <div class="row mt-3">
+            <div class="col-12">
+              <table class="text-center">
+                <thead>
+                  <tr>
+                    <th><p class="step2-size">S</p></th>
+                    <th><p class="step2-size">M</p></th>
+                    <th><p class="step2-size">L</p></th>
+                    <th><p class="step2-size">XL</p></th>
+                    <th><p class="step2-size">XXL</p></th>
+                  </tr>
+                </thead>
+                <tbody class="mt-2">
+                  <tr>
+                    <td>
+                      <input type="text" name="" class="step2-input">
+                    </td>
+                    <td>
+                      <input type="text" name="" class="step2-input">
+                    </td>
+                    <td>
+                      <input type="text" name="" class="step2-input">
+                    </td>
+                    <td>
+                      <input type="text" name="" class="step2-input">
+                    </td>
+                    <td>
+                      <input type="text" name="" class="step2-input">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-12 mt-3 ps-4">
+          <div class="row">
+            <div class="col-12 fw-bold step2-color p-3">
+              <p class="mb-0">RIEPILOGO</p>
+            </div>
+            <div class="col-12 fw-bold border-bottom mt-3 pb-1">
+              <p class="mb-0">QTÀ  ARTICOLO</p>
+            </div>
+          </div>
+          <div class="row mt-1">
+            <div class="col-2">
+              <small>50</small>
+            </div>
+            <div class="col-10">
+              <a href="#" class="step2-link-style">
+                <small>T-shirt Original White - FR610820W</small>
+              </a>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-12 step2-color fw-bold p-2">
+              <small>Prezzo unitario: <span>€ 4,88</span> + iva cad.</small>
+            </div>
+          </div>
+          <div class="row mt-2 pb-1">
+            <div class="col-12 fw-bold border-bottom">
+              <small>STAMPA</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>fronte</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>2 colori</small>
+            </div>
+          </div> 
+          <div class="row mt-3">
+            <div class="col-12 step2-color p-2 fw-bold">
+              <small><span>TOTALE:</span><span>€ 297,68</span> inclusa iva</small>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-12">
+              <small>Trasporto e impianti di stampa GRATUITI.</small>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-6">
+              <button class="ts-back-butn ts-butn" onclick="changeStep(1)">Back</button>
+            </div>
+            <div class="col-6"> 
+              <button class="ts-next-butn ts-butn" onclick="changeStep(3)">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- step number three -->
+    <div id="step3" class="step">
+      <div class="row mt-3">
+        <div class="col-xl-8 col-lg-8 col-md-8 col-12 mt-3">
+          <div class="row p-2" style="background: #f2fbff;">
+            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-4">
+              <img src="images/step3-img1.png" class="w-100">
+            </div>
+            <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-8 d-flex">
+              <input type="checkbox" id="merce" name="" class="form-check-input">
+              <div>
+                <label for="merce" class="ms-1">MERCE NEUTRA / SENZA STAMPA</label><br>
+                <label for="merce">
+                <small>Seleziona questa opzione se desideri ordinare i prodotti senza nessuna stampa personalizzata</small>
+                </label>
+              </div>
+            </div>
+          </div>
+          <!-- FRONTE section -->
+          <div class="row mt-4">
+            <div class="col-12 border-bottom fw-bold">
+              <p>FRONTE</p>
+            </div>
+            <div class="col-12 border-bottom pb-1">
+              <small>Seleziona il tipo di personalizzazione che vuoi effettuare sul fronte della t-shirt.Clicca AVANTI per procedere con lo step successivo</small>
+            </div>
+          </div>
+          <div class="row mt-2 pb-5 justify-content-center">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-7 mt-2">
+              <img src="images/step3-img2.jpg" class="w-100">
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-6 mt-2">
+              <input id="Nessuno" type="radio" name="fronte" class="form-check-input">
+              <label for="Nessuno" class="ms-1"><small>Nessuno</small></label>
+              <br>
+              <input id="1 colori" type="radio" name="fronte" class="form-check-input">
+              <label for="1 colori" class="ms-1"><small>1 colori</small></label>
+              <br>
+              <input id="2 colori" type="radio" name="fronte" class="form-check-input">
+              <label for="2 colori" class="ms-1"><small>2 colori</small></label>
+              <br>
+              <input id="3 colori" type="radio" name="fronte" class="form-check-input">
+              <label for="3 colori" class="ms-1"><small>3 colori</small></label>
+              <br>
+              <input id="4 colori" type="radio" name="fronte" class="form-check-input">
+              <label for="4 colori" class="ms-1"><small>4 colori</small></label>
+              <br>
+              <input id="5 colori" type="radio" name="fronte" class="form-check-input">
+              <label for="5 colori" class="ms-1"><small>5 colori</small></label>
+              <br>
+              <input id="Quadricromia" type="radio" name="fronte" class="form-check-input">
+              <label for="Quadricromia" class="ms-1"><small>Quadricromia</small></label>
+              <br>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-6 mt-2">
+              <input id="Flex 1 colore" type="radio" name="fronte" class="form-check-input">
+              <label for="Flex 1 colore" class="ms-1"><small>Flex 1 colore</small></label>
+              <br>
+              <input id="Flex 2 colori" type="radio" name="fronte" class="form-check-input ">
+              <label for="Flex 2 colori" class="ms-1 border-bottom pb-2"><small>Flex 2 colori</small></label>
+              <br>
+              <input id="Flock 1 colore" type="radio" name="fronte" class="form-check-input">
+              <label for="Flock 1 colore" class="ms-1"><small>Flock 1 colore</small></label>
+              <br>
+              <input id="Flock 2 colori" type="radio" name="fronte" class="form-check-input ">
+              <label for="Flock 2 colori" class="ms-1 border-bottom pb-2"><small>Flock 2 colori</small></label>
+              <br>
+              <input id="Stampa" type="radio" name="fronte" class="form-check-input">
+              <label for="Stampa" class="ms-1 border-bottom"><small>Stampa digitale</small></label>
+              <br>
+              <input id="Ricamo" type="radio" name="fronte" class="form-check-input ">
+              <label for="Ricamo" class="ms-1 pb-2"><small>Ricamo</small></label>
+            </div>
+          </div>
+          <!-- RETRO section -->
+          <div class="row mt-5">
+            <div class="col-12 border-bottom fw-bold">
+              <p>RETRO</p>
+            </div>
+            <div class="col-12 border-bottom pb-1">
+              <small>Seleziona il tipo di personalizzazione che vuoi effettuare sul fronte della t-shirt.Clicca AVANTI per procedere con lo step successivo</small>
+            </div>
+          </div>
+          <div class="row mt-2 pb-5 justify-content-center">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-7 mt-2">
+              <img src="images/step3-img8.jpg" class="w-100">
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-6 mt-2">
+              <input id="RETRONessuno" type="radio" name="RETRO" class="form-check-input">
+              <label for="RETRONessuno" class="ms-1"><small>Nessuno</small></label>
+              <br>
+              <input id="RETRO1 colori" type="radio" name="RETRO" class="form-check-input">
+              <label for="RETRO1 colori" class="ms-1"><small>1 colori</small></label>
+              <br>
+              <input id="RETRO2 colori" type="radio" name="RETRO" class="form-check-input">
+              <label for="RETRO2 colori" class="ms-1"><small>2 colori</small></label>
+              <br>
+              <input id="RETRORETRO3 colori" type="radio" name="RETRO" class="form-check-input">
+              <label for="RETRORETRO3 colori" class="ms-1"><small>3 colori</small></label>
+              <br>
+              <input id="RETRORETRO4 colori" type="radio" name="RETRO" class="form-check-input">
+              <label for="RETRORETRO4 colori" class="ms-1"><small>4 colori</small></label>
+              <br>
+              <input id="RETRO5 colori" type="radio" name="RETRO" class="form-check-input">
+              <label for="RETRO5 colori" class="ms-1"><small>5 colori</small></label>
+              <br>
+              <input id="RETROQuadricromia" type="radio" name="RETRO" class="form-check-input">
+              <label for="RETROQuadricromia" class="ms-1"><small>Quadricromia</small></label>
+              <br>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-6 mt-2">
+              <input id="RETROFlex 1 colore" type="radio" name="RETRO" class="form-check-input">
+              <label for="RETROFlex 1 colore" class="ms-1"><small>Flex 1 colore</small></label>
+              <br>
+              <input id="RETROFlex 2 colori" type="radio" name="RETRO" class="form-check-input ">
+              <label for="RETROFlex 2 colori" class="ms-1 border-bottom pb-2"><small>Flex 2 colori</small></label>
+              <br>
+              <input id="RETROFlock 1 colore" type="radio" name="RETRO" class="form-check-input">
+              <label for="RETROFlock 1 colore" class="ms-1"><small>Flock 1 colore</small></label>
+              <br>
+              <input id="RETROFlock 2 colori" type="radio" name="RETRO" class="form-check-input ">
+              <label for="RETROFlock 2 colori" class="ms-1 border-bottom pb-2"><small>Flock 2 colori</small></label>
+              <br>
+              <input id="RETROStampa" type="radio" name="RETRO" class="form-check-input">
+              <label for="RETROStampa" class="ms-1 border-bottom"><small>Stampa digitale</small></label>
+              <br>
+              <input id="RETRORicamo" type="radio" name="RETRO" class="form-check-input ">
+              <label for="RETRORicamo" class="ms-1 pb-2"><small>Ricamo</small></label>
+            </div>
+          </div>
+          <!-- SINISTRA section -->
+          <div class="row mt-5">
+            <div class="col-12 border-bottom fw-bold">
+              <p>SINISTRA</p>
+            </div>
+            <div class="col-12 border-bottom pb-1">
+              <small>Seleziona il tipo di personalizzazione che vuoi effettuare sul fronte della t-shirt.Clicca AVANTI per procedere con lo step successivo</small>
+            </div>
+          </div>
+          <div class="row mt-2 pb-5 justify-content-center">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-7 mt-2">
+              <img src="images/step3-img3.jpg" class="w-100">
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-6 mt-2">
+              <input id="SINNessuno" type="radio" name="SINISTRA" class="form-check-input">
+              <label for="SINNessuno" class="ms-1"><small>Nessuno</small></label>
+              <br>
+              <input id="SIN1 colori" type="radio" name="SINISTRA" class="form-check-input">
+              <label for="SIN1 colori" class="ms-1"><small>1 colori</small></label>
+              <br>
+              <input id="SIN2 colori" type="radio" name="SINISTRA" class="form-check-input">
+              <label for="SIN2 colori" class="ms-1"><small>2 colori</small></label>
+              <br>
+              <input id="SIN3 colori" type="radio" name="SINISTRA" class="form-check-input">
+              <label for="SIN3 colori" class="ms-1"><small>3 colori</small></label>
+              <br>
+              <input id="SIN4 colori" type="radio" name="SINISTRA" class="form-check-input">
+              <label for="SIN4 colori" class="ms-1"><small>4 colori</small></label>
+              <br>
+              <input id="SIN5 colori" type="radio" name="SINISTRA" class="form-check-input">
+              <label for="SIN5 colori" class="ms-1"><small>5 colori</small></label>
+              <br>
+              <input id="SINQuadricromia" type="radio" name="SINISTRA" class="form-check-input">
+              <label for="SINQuadricromia" class="ms-1"><small>Quadricromia</small></label>
+              <br>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-6 mt-2">
+              <input id="SINFlex 1 colore" type="radio" name="SINISTRA" class="form-check-input">
+              <label for="SINFlex 1 colore" class="ms-1"><small>Flex 1 colore</small></label>
+              <br>
+              <input id="SINFlex 2 colori" type="radio" name="SINISTRA" class="form-check-input ">
+              <label for="SINFlex 2 colori" class="ms-1 border-bottom pb-2"><small>Flex 2 colori</small></label>
+              <br>
+              <input id="SINFlock 1 colore" type="radio" name="SINISTRA" class="form-check-input">
+              <label for="SINFlock 1 colore" class="ms-1"><small>Flock 1 colore</small></label>
+              <br>
+              <input id="SINFlock 2 colori" type="radio" name="SINISTRA" class="form-check-input ">
+              <label for="SINFlock 2 colori" class="ms-1 border-bottom pb-2"><small>Flock 2 colori</small></label>
+              <br>
+              <input id="SINStampa" type="radio" name="SINISTRA" class="form-check-input">
+              <label for="SINStampa" class="ms-1 border-bottom"><small>Stampa digitale</small></label>
+              <br>
+              <input id="SINRicamo" type="radio" name="SINISTRA" class="form-check-input ">
+              <label for="SINRicamo" class="ms-1 pb-2"><small>Ricamo</small></label>
+            </div>
+          </div>
+          <!-- DESTRA section -->
+          <div class="row mt-5">
+            <div class="col-12 border-bottom fw-bold">
+              <p>DESTRA</p>
+            </div>
+            <div class="col-12 border-bottom pb-1">
+              <small>Seleziona il tipo di personalizzazione che vuoi effettuare sul fronte della t-shirt.Clicca AVANTI per procedere con lo step successivo</small>
+            </div>
+          </div>
+          <div class="row mt-2 pb-5 justify-content-center">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-7 mt-2">
+              <img src="images/step3-img4.jpg" class="w-100">
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-6 mt-2">
+              <input id="DESTRANessuno" type="radio" name="DESTRA" class="form-check-input">
+              <label for="DESTRANessuno" class="ms-1"><small>Nessuno</small></label>
+              <br>
+              <input id="DESTRA1 colori" type="radio" name="DESTRA" class="form-check-input">
+              <label for="DESTRA1 colori" class="ms-1"><small>1 colori</small></label>
+              <br>
+              <input id="DESTRA2 colori" type="radio" name="DESTRA" class="form-check-input">
+              <label for="DESTRA2 colori" class="ms-1"><small>2 colori</small></label>
+              <br>
+              <input id="DESTRA3 colori" type="radio" name="DESTRA" class="form-check-input">
+              <label for="DESTRA3 colori" class="ms-1"><small>3 colori</small></label>
+              <br>
+              <input id="DESTRA4 colori" type="radio" name="DESTRA" class="form-check-input">
+              <label for="DESTRA4 colori" class="ms-1"><small>4 colori</small></label>
+              <br>
+              <input id="DESTRA5 colori" type="radio" name="DESTRA" class="form-check-input">
+              <label for="DESTRA5 colori" class="ms-1"><small>5 colori</small></label>
+              <br>
+              <input id="DESTRAQuadricromia" type="radio" name="DESTRA" class="form-check-input">
+              <label for="DESTRAQuadricromia" class="ms-1"><small>Quadricromia</small></label>
+              <br>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-6 mt-2">
+              <input id="DESTRAFlex 1 colore" type="radio" name="DESTRA" class="form-check-input">
+              <label for="DESTRAFlex 1 colore" class="ms-1"><small>Flex 1 colore</small></label>
+              <br>
+              <input id="DESTRAFlex 2 colori" type="radio" name="DESTRA" class="form-check-input ">
+              <label for="DESTRAFlex 2 colori" class="ms-1 border-bottom pb-2"><small>Flex 2 colori</small></label>
+              <br>
+              <input id="DESTRAFlock 1 colore" type="radio" name="DESTRA" class="form-check-input">
+              <label for="DESTRAFlock 1 colore" class="ms-1"><small>Flock 1 colore</small></label>
+              <br>
+              <input id="DESTRAFlock 2 colori" type="radio" name="DESTRA" class="form-check-input ">
+              <label for="DESTRAFlock 2 colori" class="ms-1 border-bottom pb-2"><small>Flock 2 colori</small></label>
+              <br>
+              <input id="DESTRAStampa" type="radio" name="DESTRA" class="form-check-input">
+              <label for="DESTRAStampa" class="ms-1 border-bottom"><small>Stampa digitale</small></label>
+              <br>
+              <input id="DESTRARicamo" type="radio" name="DESTRA" class="form-check-input ">
+              <label for="DESTRARicamo" class="ms-1 pb-2"><small>Ricamo</small></label>
+            </div>
+          </div>
+          <!-- DIMENSIONI DI STAMPA section -->
+          <div class="row mt-5">
+            <div class="col-12 border-bottom fw-bold">
+              <p>DIMENSIONI DI STAMPA</p>
+            </div>
+            <div class="col-12 border-bottom pb-1">
+              <small>Seleziona il tipo di personalizzazione che vuoi effettuare sul fronte della t-shirt.Clicca AVANTI per procedere con lo step successivo</small>
+            </div>
+          </div>
+          <div class="row mt-2 pb-5">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-6 mt-2">
+              <img src="images/step3-img5.jpg" class="w-100">
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-6 mt-2">
+              <small class="fw-bold mb-2">Fronte</small><br>
+              <input id="Fino a A7" type="radio" name="DIMENSIONI" class="form-check-input">
+              <label for="Fino a A7" class="ms-1"><small>Fino a A7</small></label>
+              <br>
+              <input id="DFino a A6" type="radio" name="DIMENSIONI" class="form-check-input">
+              <label for="DFino a A6" class="ms-1"><small>Fino a A6</small></label>
+              <br>
+              <input id="Fino a A5" type="radio" name="DIMENSIONI" class="form-check-input">
+              <label for="Fino a A5" class="ms-1"><small>Fino a A5</small></label>
+              <br>
+              <input id="Fino a A4" type="radio" name="DIMENSIONI" class="form-check-input">
+              <label for="Fino a A4" class="ms-1"><small>Fino a A4</small></label>
+            </div>
+          </div>
+          <!-- COLORI DI STAMPA SPECIALI section -->
+          <div class="row mt-5">
+            <div class="col-12 border-bottom fw-bold">
+              <p>COLORI DI STAMPA SPECIALI</p>
+            </div>
+            <div class="col-12 border-bottom pb-1">
+              <small>Seleziona per ogni lato da personalizzare una delle opzioni indicate nel seguente step, se nella tua grafica è presente un colore o una lavorazione speciale tra quelle elencate.Clicca AVANTI per procedere con lo step successivo. 
+              </small>
+            </div>
+          </div>
+          <div class="row mt-4 pb-5">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-6 mt-2">
+              <img src="images/step3-img6.jpg" class="w-100">
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-6 mt-2">
+              <small class="fw-bold mb-2">Fronte</small><br>
+              <input id="Nessuno dimen" type="radio" name="COLORI DI" class="form-check-input">
+              <label for="Nessuno dimen" class="ms-1"><small>Nessuno</small></label>
+              <br>
+              <input id="Spessorato dimen" type="radio" name="COLORI DI" class="form-check-input">
+              <label for="Spessorato dimen" class="ms-1"><small>Spessorato</small></label>
+              <br>
+              <input id="Strass dimen" type="radio" name="COLORI DI" class="form-check-input">
+              <label for="Strass dimen" class="ms-1"><small>Strass</small></label>
+              <br>
+              <input id="Lamine metalliche" type="radio" name="COLORI DI" class="form-check-input">
+              <label for="Lamine metalliche" class="ms-1"><small>Lamine metalliche</small></label>
+              <br>
+              <input id="Pantone" type="radio" name="COLORI DI" class="form-check-input">
+              <label for="Pantone" class="ms-1"><small>Pantone</small></label>
+              <br>
+              <input id="Fluo" type="radio" name="COLORI DI" class="form-check-input">
+              <label for="Fluo" class="ms-1"><small>Fluo</small></label>
+            </div>
+          </div>
+          <!-- CAMBIO COLORE DI STAMPA section -->
+          <div class="row mt-5">
+            <div class="col-12 border-bottom fw-bold">
+              <p>CAMBIO COLORE DI STAMPA</p>
+            </div>
+            <div class="col-12 border-bottom pb-1">
+              <small>Seleziona per ogni lato da personalizzare una delle opzioni indicate nel seguente step, se nella tua grafica è presente un colore o una lavorazione speciale tra quelle elencate.Clicca AVANTI per procedere con lo step successivo. 
+              </small>
+            </div>
+          </div>
+          <div class="row mt-4 pb-5">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-6 mt-2">
+              <img src="images/step3-img7.jpg" class="w-100">
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-6 mt-2">
+              <small class="fw-bold mb-2">Fronte</small><br>
+              <input id="no" type="radio" name="COLORI DI" class="form-check-input">
+              <label for="no" class="ms-1"><small>no</small></label>
+              <br>
+              <input id="1 cambio" type="radio" name="COLORI DI" class="form-check-input">
+              <label for="1 cambio" class="ms-1"><small>1</small></label>
+              <br>
+              <input id="2 combio" type="radio" name="COLORI DI" class="form-check-input">
+              <label for="2 combio" class="ms-1"><small>2</small></label>
+              <br>
+              <input id="3 combio" type="radio" name="COLORI DI" class="form-check-input">
+              <label for="3 combio" class="ms-1"><small>3</small></label>
+              <br>
+              <input id="4 combio" type="radio" name="COLORI DI" class="form-check-input">
+              <label for="4 combio" class="ms-1"><small>4</small></label>
+              <br>
+              <input id="5 combio" type="radio" name="COLORI DI" class="form-check-input">
+              <label for="5 combio" class="ms-1"><small>5</small></label>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-12 mt-3 ps-4">
+          <div class="row">
+            <div class="col-12 fw-bold step2-color p-3">
+              <p class="mb-0">RIEPILOGO</p>
+            </div>
+            <div class="col-12 fw-bold border-bottom mt-3 pb-1">
+              <p class="mb-0">QTÀ  ARTICOLO</p>
+            </div>
+          </div>
+          <div class="row mt-1">
+            <div class="col-2">
+              <small>50</small>
+            </div>
+            <div class="col-10">
+              <a href="#" class="step2-link-style">
+                <small>T-shirt Original White - FR610820W</small>
+              </a>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-12 step2-color fw-bold p-2">
+              <small>Prezzo unitario: <span>€ 4,88</span> + iva cad.</small>
+            </div>
+          </div>
+          <div class="row mt-2 pb-1">
+            <div class="col-12 fw-bold border-bottom">
+              <small>STAMPA</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>Fronte</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>2 colori</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>Retro</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>Nessuno</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>Sinistra</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>Nessuno</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>Destra</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>Nessuno</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>Dimensioni fronte</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>Fino alla misura A4</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>Cambio colore fronte</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>No</small>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 fw-bold border-bottom pb-1">
+              <small>COLORI SPECIALI</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>Colori speciali fronte</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>Nessuno</small>
+            </div>
+          </div> 
+          <div class="row mt-3">
+            <div class="col-12 step2-color p-2 fw-bold">
+              <small><span>TOTALE:</span><span>€ 297,68</span> inclusa iva</small>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-12">
+              <small>Trasporto e impianti di stampa GRATUITI.</small>
+            </div>
+          </div>
+
+          <div class="row mt-3">
+            <div class="col-6">
+              <button class="ts-back-butn ts-butn" onclick="changeStep(2)">Back</button>
+            </div>
+            <div class="col-6"> 
+              <button class="ts-next-butn ts-butn" onclick="changeStep(4)">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- step number four -->
+    <div id="step4" class="step">
+      <div class="row mt-3">
+        <div class="col-xl-8 col-lg-8 col-md-8 col-12 mt-3">
+          <!-- ETICHETTA section -->
+          <div class="row mt-4">
+            <div class="col-12 border-bottom fw-bold">
+              <p>ETICHETTA</p>
+            </div>
+            <div class="col-12 border-bottom pb-1">
+              <small>Seleziona una di queste opzioni per confezionare il tuo prodotto in maniera esclusiva.Clicca AVANTI per procedere con lo step successivo.</small>
+            </div>
+          </div>
+          <div class="row mt-3 pb-5 justify-content-center">
+            <div class="col-4 mt-3">
+              <img src="images/step4-img1.jpg" class="w-100">
+            </div>
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12 mt-3">
+              <div class="row">
+                <div class="col-12 border-bottom pb-2 mb-2">
+                  <input id="s4-Etichetta" type="radio" class="form-check-input me-1" name="ETICHETTA">
+                  <label for="s4-Etichetta">
+                    <small>Etichetta Originale</small>
+                  </label>
+                </div>
+              </div>
+              <small class="fw-bold ">Etichetta personalizzata SDT</small>
+              <br>
+              <input id="s4-1 colore" type="radio" class="form-check-input me-1" name="ETICHETTA">
+              <label for="s4-1 colore">
+                <small>Stampa Diretta su tessuto a 1 colore</small>
+              </label>
+              <br>
+              <div class="row">
+                <div class="col-12 border-bottom pb-2 mt-1 mb-2">
+                  <input id="s4-2 colore" type="radio" class="form-check-input me-1 mt-1" name="ETICHETTA">
+                  <label for="s4-2 colore">
+                    <small>Stampa Diretta su tessuto a 2 colori</small>
+                  </label>
+                </div>
+              </div>
+              <small class="fw-bold">Etichetta tessuta personalizzata(vedi)(+€2,00)</small>
+              <br>
+              <input id="s4-poliestere" type="radio" class="form-check-input me-1" name="ETICHETTA">
+              <label for="s4-poliestere">
+                <small>Stampa digitale su poliestere 100%</small>
+              </label>
+              <br>
+              <div class="row">
+                <div class="col-12 border-bottom pb-2 mt-1">
+                  <input id="s4-serigrafica" type="radio" class="form-check-input me-1" name="ETICHETTA">
+                  <label for="s4-serigrafica">
+                    <small>Stampa serigrafica a 1 colore su nastro in raso</small>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- PIEGA E IMBUSTAMENTO section -->
+          <div class="row mt-5">
+            <div class="col-12 border-bottom fw-bold">
+              <p>PIEGA E IMBUSTAMENTO</p>
+            </div>
+            <div class="col-12 border-bottom pb-1">
+              <small>Seleziona una di queste opzioni per confezionare il tuo prodotto in maniera esclusiva.Clicca AVANTI per procedere con lo step successivo.</small>
+            </div>
+          </div>
+          <div class="row mt-3 pb-5 justify-content-center">
+            <div class="col-4 mt-3">
+              <img src="images/step4-img2.jpg" class="w-100">
+            </div>
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12 mt-3">
+              <div class="row">
+                <div class="col-12 border-bottom pb-2 mb-2">
+                  <input id="s4-Senza" type="radio" class="form-check-input me-1" name="PIEGA">
+                  <label for="s4-Senza">
+                    <small>Senza piega e busta</small>
+                  </label>
+                </div>
+              </div>
+              <small class="fw-bold ">Piega e imbustamento (+€0,55)</small>
+              <br>
+              <input id="s4-personalizzato" type="radio" class="form-check-input me-1 mt-1" name="PIEGA">
+              <label for="s4-personalizzato" class="mt-1">
+                <small>Senza adesivo chiudi busta personalizzato</small>
+              </label>
+              <br>
+              <input id="s4-Tondo" type="radio" class="form-check-input me-1" name="PIEGA">
+              <label for="s4-Tondo">
+                <small>Adesivo chiudi busta Tondo</small>
+              </label>
+              <br>
+              <input id="s4-Quadrato" type="radio" class="form-check-input me-1" name="PIEGA">
+              <label for="s4-Quadrato">
+                <small>Adesivo chiudi busta Quadrato</small>
+              </label>
+              <br>
+              <input id="s4-Ovale" type="radio" class="form-check-input me-1" name="PIEGA">
+              <label for="s4-Ovale">
+                <small>Adesivo chiudi busta Ovale</small>
+              </label>
+              <br>
+              <div class="row">
+                <div class="col-12 border-bottom pb-2 mt-1 mb-2">
+                  <input id="s4-Triangolare" type="radio" class="form-check-input me-1" name="PIEGA">
+                  <label for="s4-Triangolare">
+                    <small>Adesivo chiudi busta Triangolare</small>
+                  </label>
+                </div>
+              </div>              
+              <div class="row">
+                <div class="col-12 border-bottom pb-2 mt-1">
+                  <input id="s4-Rolling Pack" type="radio" class="form-check-input me-1" name="PIEGA">
+                  <label for="s4-Rolling Pack">
+                    <small>Rolling Pack Pack</small>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- CARTELLINO PERSONALIZZATO section -->
+          <div class="row mt-5">
+            <div class="col-12 border-bottom fw-bold">
+              <p>CARTELLINO PERSONALIZZATO</p>
+            </div>
+            <div class="col-12 border-bottom pb-1">
+              <small>Seleziona una di queste opzioni per confezionare il tuo prodotto in maniera esclusiva.Clicca AVANTI per procedere con lo step successivo.</small>
+            </div>
+          </div>
+          <div class="row mt-3 pb-5 justify-content-center">
+            <div class="col-4 mt-3">
+              <img src="images/step4-img3.jpg" class="w-100">
+            </div>
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12 mt-3">
+              <div class="row">
+                <div class="col-12 border-bottom pb-2 mb-2">
+                  <input id="s4-Senza cartellino" type="radio" class="form-check-input me-1" name="CARTELLINO">
+                  <label for="s4-Senza cartellino">
+                    <small>Senza cartellino</small>
+                  </label>
+                </div>
+              </div>
+              <small class="fw-bold">Cartellino personalizzato Standard</small>
+              <br>
+              <input id="s4-Formato 5x10" type="radio" class="form-check-input me-1" name="CARTELLINO">
+              <label for="s4-Formato 5x10">
+                <small>Formato 5x10 standard</small>
+              </label>
+              <br>
+              <input id="s4-Formato 6x6" type="radio" class="form-check-input me-1" name="CARTELLINO">
+              <label for="s4-Formato 6x6">
+                <small>Formato 6x6 standard</small>
+              </label>
+              <div class="row">
+                <div class="col-12 border-bottom pb-2 mb-2">
+                  <input id="s4-Formato personalizzato" type="radio" class="form-check-input me-1" name="CARTELLINO">
+                  <label for="s4-Formato personalizzato">
+                    <small>Formato personalizzato standard</small>
+                  </label>
+                </div>
+              </div>
+              <small class="fw-bold">Cartellino personalizzato Deluxe</small>
+              <br>
+              <input id="s4-Formato 5x10 deluxe" type="radio" class="form-check-input me-1" name="CARTELLINO">
+              <label for="s4-Formato 5x10 deluxe">
+                <small>Formato 5x10 deluxe</small>
+              </label>
+              <br>
+              <input id="s4-Formato 6x6 deluxe" type="radio" class="form-check-input me-1" name="CARTELLINO">
+              <label for="s4-Formato 6x6 deluxe">
+                <small>Formato 6x6 deluxe</small>
+              </label>
+              <div class="row">
+                <div class="col-12 border-bottom pb-2 mb-2">
+                  <input id="s4-Formato personalizzato2" type="radio" class="form-check-input me-1" name="CARTELLINO">
+                  <label for="s4-Formato personalizzato2">
+                    <small>Formato Personalizzato deluxe</small>
+                  </label>
+                </div>
+              </div>                  
+            </div>
+          </div>
+          <!-- section -->
+          <div class="row p-2 mt-5" style="background: #f2fbff;">
+            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-4">
+              <img src="images/step4-img4.png" class="w-100">
+            </div>
+            <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-8 d-flex">
+              <input type="checkbox" id="merce" name="" class="form-check-input">
+              <div>
+                <label for="merce" class="ms-1">MERCE NEUTRA / SENZA STAMPA</label><br>
+                <label for="merce">
+                <small>Seleziona questa opzione se desideri ordinare i prodotti senza nessuna stampa personalizzata</small>
+                </label>
+              </div>
+            </div>
+          </div>
+          <!-- IMBALLO section -->
+          <div class="row mt-5">
+            <div class="col-12 border-bottom fw-bold">
+              <p>IMBALLO</p>
+            </div>
+            <div class="col-12 border-bottom pb-1">
+              <small>Seleziona una di queste opzioni per confezionare il tuo prodotto in maniera esclusiva.Clicca AVANTI per procedere con lo step successivo.</small>
+            </div>
+          </div>
+          <div class="row mt-3 justify-content-center">
+            <div class="col-4 mt-3">
+              <img src="images/step4-img5.jpg" class="w-100">
+            </div>
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12 mt-3">
+              <div class="row">
+                <div class="col-12 border-bottom pb-2 mb-2">
+                  <input id="s4-Cartone di" type="radio" class="form-check-input me-1" name="CARTELLINO">
+                  <label for="s4-Cartone di">
+                    <small>Cartone di spedizione Pubblicarrello.com</small>
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 border-bottom pb-2 mb-2">
+                  <input id="s4-Cartone di2" type="radio" class="form-check-input me-1" name="CARTELLINO">
+                  <label for="s4-Cartone di2">
+                    <small>Cartone di spedizione neutro</small>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-12 mt-3 ps-4">
+          <div class="row">
+            <div class="col-12 fw-bold step2-color p-3">
+              <p class="mb-0">RIEPILOGO</p>
+            </div>
+            <div class="col-12 fw-bold border-bottom mt-3 pb-1">
+              <p class="mb-0">QTÀ  ARTICOLO</p>
+            </div>
+          </div>
+          <div class="row mt-1">
+            <div class="col-2">
+              <small>50</small>
+            </div>
+            <div class="col-10">
+              <a href="#" class="step2-link-style">
+                <small>T-shirt Original White - FR610820W</small>
+              </a>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-12 step2-color fw-bold p-2">
+              <small>Prezzo unitario: <span>€ 4,88</span> + iva cad.</small>
+            </div>
+          </div>
+          <div class="row mt-2 pb-1">
+            <div class="col-12 fw-bold border-bottom">
+              <small>STAMPA</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>Fronte</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>2 colori</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>Retro</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>Nessuno</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>Sinistra</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>Nessuno</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>Destra</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>Nessuno</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>Dimensioni fronte</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>Fino alla misura A4</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>Cambio colore fronte</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>No</small>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 fw-bold border-bottom pb-1">
+              <small>COLORI SPECIALI</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>Colori speciali fronte</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>Nessuno</small>
+            </div>
+          </div> 
+          <div class="row">
+            <div class="col-12 fw-bold border-bottom pb-1">
+              <small>CONFEZIONAMENTO</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>Etichetta</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>Etichetta Originale</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>cartellino</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>Senza cartellino</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>Piega + Busta</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>Senza piega e busta</small>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 fw-bold border-bottom pb-1">
+              <small>IMBALLO</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>Cartone</small>
+            </div>
+            <div class="col-6 mt-1">
+              <small>Pubblicarrello</small>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-12 step2-color p-2 fw-bold">
+              <small><span>TOTALE:</span><span>€ 297,68</span> inclusa iva</small>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-12">
+              <small>Trasporto e impianti di stampa GRATUITI.</small>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-6">
+              <button class="ts-back-butn ts-butn" onclick="changeStep(3)">Back</button>
+            </div>
+            <div class="col-6"> 
+              <button class="ts-next-butn ts-butn" onclick="changeStep(5)">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="step5" class="step mt-2">
+        <div class="row g-0">
+            <div class="col-md-6">
+                <h4 class="text-secondary ">UPLOAD FILE DI STAMPA</h4>
+                <span class="text-secondary">Riceverai una bozza grafica da visionare e approvare prima della stampa!</span>
+            </div>
+            <div class="col-md-6 text-end">
+                <div class="cus-tooltip"></div>
+            </div>
+        </div>
+        <div class="row steps pt-3 border-top border-bottom border-dark">
+            <div class="col-md-4 ">
+                <img src="images/pic_01.png" alt="">
+                <h5 class="cus-font11 mt-2">1. UPLOAD FILE</h5>
+                <p class="cus-font11">Carica i file di stampa e scrivi tutte le informazioni utili per la personalizzazione.</p>
+            </div>
+            <div class="col-md-4 ">
+                <img src="images/pic_02.png" alt="">
+                <h5 class="cus-font11 mt-2">2. VERIFICA AVANZATA GRATUITA</h5>
+                <p class="cus-font11">Un nostro grafico verificherà i file e ti invierà un bozzetto da approvare prima della stampa.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="images/pic_03.png" alt="">
+                <h5 class="cus-font11 mt-2">3. APPROVAZIONE</h5>
+                <p class="cus-font11">Solo dopo la tua approvazione procederemo con la produzione!</p>
+            </div>
+        </div>
+        <div class="row g-0 p-5 border-bottom mb-2">
+            <div class="col-lg-3 col-md-6 col-12 text-center">
+                <img src="images/shirt.jpg" alt="">
+            </div>
+            <div class="col-lg-5 col-md-6 col-12">
+                <div class="d-flex justify-content-between">
+                    <h5 class="cus-font13 mt-2 text-secondary fw-bold">FILE FRONTE</h5>
+                    <div class="cus-tooltip"></div>
+                </div>
+                <p class="cus-font13 text-secondary">Carica i file di stampa e scrivi tutte le informazioni utili per la personalizzazione.</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">Invierò il file successivamente</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                    <label class="form-check-label" for="flexRadioDefault2">Carico il file - VERIFICA FILE DI STAMPA GRATUITA!</label>
+                </div>
+                <div class="file-box text-center p-4" style="border: dashed rgb(212, 212, 212) ;">
+                    <div class=" cus-font13 mb-2">Trascina file qui</div>
+                    <input type="file">
+                    <div class="mt-2"><i class="fa-solid fa-cloud-arrow-up fa-2xl"></i></div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 text-center mt-md-3 mt-3">
+                <textarea name="" id="" cols="35" rows="6" placeholder=""></textarea>                
+            </div>
+        </div>  
+        <div class="row justify-content-end">
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+            <div class="row mt-3">
+              <div class="col-6">
+                <button class="ts-back-butn ts-butn" onclick="changeStep(3)">Back</button>
+              </div>
+              <div class="col-6"> 
+                <button class="ts-next-butn ts-butn" onclick="changeStep(5)">Next</button>
+              </div>
+            </div>
+          </div>
+        </div>            
+    </div>
+  </div>
+
+<script>
+  let currentStep = 1;
+
+  function changeStep(step) {
+    document.getElementById(`step${currentStep}Tab`).classList.remove('active');
+    document.getElementById(`step${currentStep}`).classList.remove('active');
+
+    currentStep = step;
+
+    document.getElementById(`step${currentStep}Tab`).classList.add('active');
+    document.getElementById(`step${currentStep}`).classList.add('active');
+  }
+
+  function submitForm() {
+    // Implement form submission logic here
+    alert('Form submitted successfully!');
+  }
+</script>
+
+</body>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+</html>
